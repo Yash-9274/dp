@@ -1,0 +1,331 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Sections */
+.section {
+    height: 100vh; /* Set sections to full viewport height */
+    padding: 0;
+    margin: 0; /* Remove margin to eliminate gaps */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Landing Section */
+.landing {
+    background: url('Formal.jpeg') center/cover;
+    color: white;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.landing p {
+    font-size: 1.5rem;
+}
+
+/* Split Section */
+.split-section {
+    display: flex;
+    height: 100vh; /* Set split section to full viewport height */
+    width: 100%; /* Set split section to full viewport width */
+}
+
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 50%; /* Adjust width for the image side */
+}
+
+.image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-side {
+    flex: 1;
+    padding: 2rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Adjust width for the text side */
+}
+
+/* Other Sections */
+#resume {
+    background-color: #ECECEC;
+    color: #333;
+}
+
+#projects {
+    background-color: #FFD700;
+    color: #333;
+}
+
+#skills {
+    background-color: #ADD8E6;
+    color: #333;
+}
+
+#interests {
+    background-color: #FFA07A;
+    color: #333;
+}
+
+#resume h2, #projects h2, #skills h2, #interests h2 {
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Project Cards */
+.project-cards {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping, enable scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.project-card {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 400px; /* Adjust card width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+    color: #666;
+}
+.project-card {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px; /* Adjust card width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Add this to hide overflow content */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card img {
+    max-width: 100%; /* Make the image fit within the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire card with the image */
+}
+#resume {
+    background-color: #ECECEC;
+    color: #333;
+    padding-top: 0rem; /* Add some top padding to create space */
+}
+
+.split-section {
+    display: flex;
+    align-items: flex-start; /* Align content at the top */
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden; /* Hide overflow content */
+}
+
+.pdf-side {
+    flex: 1;
+    padding: 1rem; /* Adjust padding for smaller screens */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide overflow content */
+}
+
+.text-side {
+    flex: 1;
+    padding: 1rem; /* Adjust padding for smaller screens */
+}
+
+/* Adjust responsive styles as needed */
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+    }
+
+    .pdf-side,
+    .text-side {
+        padding: 1rem;
+    }
+
+    #resume {
+        padding-top: 1rem; /* Adjust top padding for smaller screens */
+    }
+}
+.skills-container {
+    display: flex;
+    overflow-x: auto;
+}
+#skills {
+    background-color: #F5F5F5;
+    color: #333;
+    padding: 2rem 0; /* Add padding to the section */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between; /* Distribute skills evenly */
+    gap: 1rem; /* Add gap between skills */
+    align-items: center; /* Align skills vertically */
+    padding: 0 1rem; /* Add padding to the container */
+}
+
+.skill {
+    text-align: center;
+    width: calc(100vw / 3 - 2rem); /* Set the width for each skill, accounting for gaps */
+}
+
+.skill img {
+    width: 100px; /* Set the image width */
+    height: 100px; /* Set the image height */
+    object-fit: contain; /* Ensure the entire image fits within the container */
+    background-color: transparent; /* Make the container transparent */
+    display: block; /* Center the image horizontally within the container */
+    margin: 0 auto; /* Center the image vertically within the container */
+}
+
+.skill p {
+    margin-top: 0.5rem;
+}
+.timeline {
+    position: relative;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.timeline-content {
+    padding-left: 2rem;
+}
+
+.timeline h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+@media (max-width: 768px) {
+    .skills {
+        transform: translateX(0); /* Reset translation for mobile */
+    }
+}
+
+
+/* Add this rule for responsive horizontal scrolling */
+@media (min-width: 769px) {
+    .skills {
+        transform: translateX(0); /* Reset translation */
+        width: fit-content;
+        white-space: nowrap;
+    }
+
+    .skills-container:hover .skills {
+        transform: translateX(-50%); /* Slide skills to the left on hover */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-cards {
+        padding: 1rem;
+    }
+
+    .project-card {
+        width: 100%; /* Adjust card width for mobile */
+    }
+}

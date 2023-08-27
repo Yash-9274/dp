@@ -1,0 +1,84 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, img, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scroll bars */
+}
+
+.project-details {
+    display: flex;
+    height: 100vh;
+}
+
+.project-images {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: #d6b1b1; /* Fallback color for images */
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.project-info {
+    flex: 1;
+    padding: 2rem;
+    background-color: white;
+    overflow-y: scroll;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-link {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.project-link:hover {
+    background-color: #555;
+}
+.project-images {
+    flex: 1;
+    position: relative;
+    background-color: #000; /* Fallback color for images */
+    animation: slideImages 10s linear infinite;
+}
+
+@keyframes slideImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
