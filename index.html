@@ -23,17 +23,80 @@
         <h1>Yash Tiwary</h1>
         <p>Full Stack Web Developer | Data Science Enthusiast</p>
     </section>
-
     <section id="about" class="section">
         <div class="split-section">
             <div class="image-side">
                 <img src="Formal.jpeg" alt="About Me Image">
             </div>
             <div class="text-side">
-                <div class="section-content">
-                    <h2>About Me</h2>
-                    <p>Write a compelling introduction about yourself here.</p>
-                </div>
+                <div class="tl-item">
+    
+                    <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+                    
+                    <div class="tl-year">
+                      <p class="f2 heading--sanSerif">2005-18</p>
+                    </div>
+                
+                    <div class="tl-content">
+                      <h1>Secondary Education</h1>
+                      <p>D.A.V Public School</p>
+                      
+                      <p>92.6</p>
+                      <p>Start of the Month</p>
+                      <p>Sports Captain</p>
+                      <p>N.G.S.F Gold Medalist</p>
+
+
+                    </div>
+                
+                  </div>
+                
+                  <div class="tl-item">
+                    
+                    <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+                    
+                    <div class="tl-year">
+                      <p class="f2 heading--sanSerif">2013</p>
+                    </div>
+                
+                    <div class="tl-content">
+                      <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
+                      <p>Suspendisse potenti. Sed sollicitudin eros lorem, eget accumsan risus dictum id. Maecenas dignissim ipsum vel mi rutrum egestas. Donec mauris nibh, facilisis ut hendrerit vel, fringilla sed felis. Morbi sed nisl et arcu.</p>
+                    </div>
+                
+                  </div>
+                
+                  <div class="tl-item">
+                    
+                    <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
+                    
+                    <div class="tl-year">
+                      <p class="f2 heading--sanSerif">2014</p>
+                    </div>
+                
+                    <div class="tl-content">
+                      <h1 class="f3 text--accent ttu">Phasellus mauris elit</h1>
+                      <p>Mauris cursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amet varius. Maecenas ac pulvinar nisi. Fusce vitae nunc ultrices, tristique dolor at, porttitor dolor. Etiam id cursus arcu, in dapibus nibh. Pellentesque non porta leo. Nulla eros odio, egestas quis efficitur vel, pretium sed.</p>
+                    </div>
+                
+                  </div>
+                
+                  <div class="tl-item">
+                    
+                    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+                    
+                    <div class="tl-year">
+                      <p class="f2 heading--sanSerif">2016</p>
+                    </div>
+                
+                    <div class="tl-content">
+                      <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
+                      <p>Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare purus non euismod. Donec vestibulum efficitur tortor, eget efficitur enim facilisis consequat. Vivamus laoreet laoreet elit. Ut ut varius metus, bibendum imperdiet ex. Curabitur diam quam, blandit at risus nec, pulvinar porttitor lorem. Pellentesque dolor elit.</p>
+                    </div>
+                
+                  </div>
+                
+                
             </div>
         </div>
     </section>
@@ -42,7 +105,7 @@
         <div class="split-section">
             <div class="pdf-side">
                 <!-- Use an iframe to embed your PDF -->
-                <iframe src="Yash_Tiwary.pdf" width="100%" height="850px" frameborder="0"></iframe>
+                <iframe src="Yash_Tiwary_CV.pdf" width="100%" height="850px" frameborder="0"></iframe>
             </div>
             <div class="text-side">
                 <div class="section-content">
@@ -116,3 +179,77 @@
     </footer>
 </body>
 </html>
+<!-- ... (your existing HTML code) ... -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+        const projectCards = document.querySelectorAll('.project-card');
+    
+        let currentCardIndex = 0;
+    
+        prevArrow.addEventListener('click', function() {
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+                updateCardVisibility();
+            }
+        });
+    
+        nextArrow.addEventListener('click', function() {
+            if (currentCardIndex < projectCards.length - 3) {
+                currentCardIndex++;
+                updateCardVisibility();
+            }
+        });
+    
+        function updateCardVisibility() {
+            projectCards.forEach(function(card, index) {
+                if (index >= currentCardIndex && index < currentCardIndex + 3) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    
+        updateCardVisibility();
+    
+        var items = document.querySelectorAll("li");
+    
+        function isItemInView(item){
+            var rect = item.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isItemInView(items[i])) {
+                    items[i].classList.add("show");
+                }
+            }
+        }
+    
+        // Listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    
+        $(document).ready(function() {
+            // Animate timeline items on scroll
+            $(window).scroll(function() {
+                $(".timeline-item").each(function() {
+                    if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
+                        $(this).addClass("animate");
+                    }
+                });
+            });
+        });
+    });
+    </script>
+    
