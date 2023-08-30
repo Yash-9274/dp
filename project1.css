@@ -14,13 +14,16 @@ body {
 .project-details {
     display: flex;
     height: 100vh;
+    
 }
 
 .project-images {
+    overflow: scroll;
+    width: 50%;
     flex: 1;
-    overflow: hidden;
     position: relative;
-    background-color: #d6b1b1; /* Fallback color for images */
+    background-color: #000; /* Fallback color for images */
+    animation: slideImages 10s linear infinite;
 }
 
 .project-image {
@@ -67,12 +70,7 @@ body {
 .project-link:hover {
     background-color: #555;
 }
-.project-images {
-    flex: 1;
-    position: relative;
-    background-color: #000; /* Fallback color for images */
-    animation: slideImages 10s linear infinite;
-}
+
 
 @keyframes slideImages {
     0% {
@@ -81,4 +79,8 @@ body {
     100% {
         transform: translateX(-100%);
     }
+} 
+.cotainer23{
+    width: 100px;
+    height: 100px;
 }
