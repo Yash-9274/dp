@@ -102,3 +102,17 @@ $(document).ready(function() {
     updateCardVisibility();
     
 });
+// JavaScript code for handling arrow key movement
+const wrapper = document.querySelector(".moving-pictures-wrapper");
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+        moveBackground(-10); // Adjust the value to control the movement speed
+    } else if (event.key === "ArrowRight") {
+        moveBackground(10); // Adjust the value to control the movement speed
+    }
+});
+
+function moveBackground(amount) {
+    wrapper.scrollLeft += amount;
+}
