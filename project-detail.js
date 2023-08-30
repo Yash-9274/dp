@@ -1,8 +1,8 @@
 
 const projectImages = [
     '25231.png',
-    'image2.jpg',
-    'image3.jpg'
+    'cover.jpg'
+    
     // Add more image filenames as needed
 ];
 
