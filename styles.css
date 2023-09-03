@@ -116,6 +116,24 @@ nav a {
     background-color: #FFA07A;
     color: #333;
 }
+/* Style for the 'interest' class */
+.interest {
+    text-align: center; /* Center-align the content */
+    margin-bottom: 20px; /* Add spacing between interests */
+}
+
+.interest img {
+    max-width: 100px; /* Limit the maximum width of the images */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Ensure images don't affect nearby elements */
+    margin: 0 auto 10px; /* Center-align the image and add spacing below */
+}
+
+.interest p {
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Set the font size for the labels */
+    margin: 0; /* Remove default margin for the labels */
+}
 
 #resume h2, #projects h2, #skills h2, #interests h2 {
     margin-top: 2rem;

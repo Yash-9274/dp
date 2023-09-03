@@ -1,0 +1,129 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Sections */
+.section {
+    height: 100vh; /* Set sections to full viewport height */
+    padding: 0;
+    margin: 0; /* Remove margin to eliminate gaps */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Landing Section */
+.landing {
+    background-color: whitesmoke;
+    color: white;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.landing p {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+#interests {
+    background-color: #aba5a2;
+    color: #333;
+}
+
+#resume h2, #projects h2, #skills h2, #interests h2 {
+    margin-top: 2rem;
+}
+/* Add a class for the moving pictures container */
+/* Styling for the moving pictures background */
+.moving-pictures-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Adjust the width to cover the entire screen with repeated images */
+    height: 100%;
+    overflow: hidden;
+    animation: moveBackground 20s linear infinite;
+}
+
+/* Styling for the moving pictures */
+.moving-picture {
+    width: 50%; /* Adjust the width of individual images */
+    height: auto;
+    float: left;
+}
+
+/* Keyframes animation for moving the background */
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust the amount of translation */
+    }
+}
+
+/* Rest of your existing CSS styles */
+/* Rest of your CSS styles */
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    background-color: #afabab;
+    border-radius: 10px;
+}
+
+.tools-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tools-logos img {
+    width: 50px; /* Adjust logo size as needed */
+    margin: 0 10px;
+}
+
+/* Rest of your CSS styles */
