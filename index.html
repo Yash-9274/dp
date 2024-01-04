@@ -336,7 +336,23 @@
         const prevArrow = document.querySelector('.prev-arrow');
         const nextArrow = document.querySelector('.next-arrow');
         const projectCards = document.querySelectorAll('.project-card');
-    
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
         let currentCardIndex = 0;
     
         prevArrow.addEventListener('click', function() {
@@ -401,5 +417,6 @@
             });
         });
     });
+
     </script>
     
