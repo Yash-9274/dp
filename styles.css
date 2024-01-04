@@ -737,3 +737,90 @@ footer {
         margin-top: -40px;
     }
 }
+/* Add this CSS for basic mobile responsiveness */
+body {
+    font-size: 16px; /* Adjust the base font size according to your design */
+}
+
+/* Apply responsive styles to the header navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    margin: 10px ;
+}
+
+/* Adjust the landing section for smaller screens */
+.landing {
+    padding-top: 80px; /* Adjust the spacing based on your design */
+}
+
+/* Make the timeline items responsive */
+.tl-item {
+    width: 100%;
+    max-width: 250px; /* Adjust the maximum width based on your design */
+    margin: 0 auto;
+}
+
+/* Adjust the work experience section for smaller screens */
+.work-experience {
+    padding: 20px;
+}
+
+/* Make project cards responsive */
+.project-card {
+    width: 100%;
+    max-width: 300px; /* Adjust the maximum width based on your design */
+    margin: 0 auto;
+}
+
+/* Make skills cards responsive */
+
+/* Adjust the interests section for smaller screens */
+.section-content h1 {
+    margin-top: 20px;
+}
+
+.interest {
+    text-align: center;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .landing {
+        padding-top: 50px;
+    }
+
+    .tl-item {
+        max-width: 100%;
+    }
+
+    .work-experience {
+        padding: 10px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .cards-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .interest {
+        margin-top: 10px;
+    }
+}
