@@ -43,7 +43,7 @@ nav a {
 
 /* Landing Section */
 .landing {
-    background: url('cover.jpg') center/cover;
+    background: url('Picture_Src/cover.jpg') center/cover;
     color: white;
 }
 
@@ -447,7 +447,7 @@ footer {
   p {
     font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 1.728rem;
-    line-height: 0;
+    line-height: 1;
   }
 }
 
