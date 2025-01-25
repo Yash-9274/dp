@@ -9,10 +9,8 @@
 </head>
 
 <body>
-  <div id="combined-loader">
-    <iframe src="combined-loader.html" frameborder="0" width="100%" height="100%"></iframe>
-  </div>
-  <div id="portfolio" style="display: none;">
+
+  <div id="portfolio">
     <body>
         <header>
             <nav>
@@ -333,7 +331,7 @@
       
 
         <footer>
-            <p>&copy; 2023 Yash Tiwary. All rights reserved.</p>
+            <p>&copy; 2025 Yash Tiwary. All rights reserved.</p>
         </footer>
     </body>
   </div>
@@ -363,14 +361,6 @@
     });
   });
 
-  setTimeout(function () {
-    // Hide the loading page and display the portfolio
-    const loaderContainer = document.getElementById('combined-loader-container');
-    const portfolioContainer = document.getElementById('portfolio');
-
-    loaderContainer.style.display = 'none';
-    portfolioContainer.style.display = 'block';
-  }, 1000);
 
   let currentCardIndex = 0;
 
